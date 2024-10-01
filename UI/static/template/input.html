@@ -1,0 +1,77 @@
+<div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+  <div class="main">
+    <div class="alpha">
+      <ul class="pageHeader">
+        <li>upload Input files</li>
+      </ul>
+    </div>
+  </div>
+    <!-- Main content -->
+    <section class="contentSection">
+       <div class="row tableBox" style="height: 512px;">
+          <!-- Your Page Content Here -->
+          <div ng-show="showLoader" id="mydiv">
+          <img  class="mappingSpinner" src="/static/images/page-loader.gif"/>
+        </div>
+
+        <div class="container-fluid contentbody" style="padding-right:6%">
+          <div class="row" class="autoMargin">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <div style="width: 43%;padding-top: 4px;margin-left: -73px;height: 91px">
+                      <div class="row input-group form-group" style="padding-top: 21px;">
+                          <!--<input type="text" class="files" >-->
+                          <label  class="input-group-btn" class="files" ng-value="myFile.name" style="padding-right: 8px;">
+                            <span class="btn btndefault" name="Browse" style="width: 108%;">
+                              <b>Browse</b><input ng-disabled="browseButton" type="file" ngf-select="upload($files)" file-model = "myFile" multiple name="xlfile" id="xlf" style="display:none;" accept=".pdf">
+                            </span>
+                          </label>
+                           <div><button style ="width: 92%;"ng-disabled="disableRun" class="btn btndefault" type="button" ng-click = "getConvertedFiles()"><b>Run</b></button></div>
+                      </div>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="row">
+
+              </div>
+            <div class="col-md-offset-6 col-md-6">
+                 <div class="col-md-3 dwnldDiv" ng-if="fileStatus" ng-show="showConvertedFiles">
+                    <a id ="dwnldFile" class="btn dwnldLink" href="/getDwnldfile" style="margin-left:277px;margin-top: -138px;" target="_self" ng-click="getOutputdata($event)">
+                      <span class="dwnldSpan" title="Download Output" >
+                        <span class="fa fa-fw fa-download fa-lg" aria-hidden="true"></span>
+                      </span>
+                    </a>
+                  </div>
+            </div>
+            <div class="row">
+                    <div class="col-md-12">
+                    <div class="table-wrapper-scroll-y " style="width: 104%;margin-left: 4px;margin-top: -53px;" ng-if="fileStatus" ng-show="showConvertedFiles">
+                     <table class="table table-bordered tableDiv" height="100px" >
+                                <thead>
+                                  <tr>
+                                    <th>S.No</th>
+                                    <th>File Name</th>
+                                    <th>Comments</th>
+                                     <th>Status</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                 <tr data-ng-repeat = "value in fileStatus"  on-finish-render="arrangeHeaders()">
+                                     <td  ng-bind="value.SNo" ng-class="{'color-red': value.Pass_Fail === 'Fail',  'color-green': value.Pass_Fail === 'Pass'}"></td>
+                                    <td  ng-bind="value.file_name" ng-class="{'color-red': value.Pass_Fail === 'Fail',  'color-green': value.Pass_Fail === 'Pass'}"></td>
+                                     <td  ng-bind="value.Comments"  ng-class="{'color-red': value.Pass_Fail === 'Fail',  'color-green': value.Pass_Fail === 'Pass'}"></td>
+                                    <td  ng-bind="value.Pass_Fail"  ng-class="{'color-red': value.Pass_Fail === 'Fail',  'color-green': value.Pass_Fail === 'Pass'}"></td>
+                                 </tr>
+                                </tbody>
+                     </table>
+                 </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+       </div>
+    </section>
+ </div>

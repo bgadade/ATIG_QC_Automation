@@ -1,0 +1,8 @@
+[
+  {"LayerName": "Cleanse", "LayerType": "DF", "ProcessStage": 0, "Transformation": [
+      {"name": "applyRegex","type":"both", "input": {"regex":"[\\[\\]]","subs":""}},
+      {"name": "applyRegex","type":"key", "input": {"regex":"[0-9.]*","subs":""}},
+      {"name": "applyRegex","type":"both", "input": {"regex":"[ ]*\\xe2\\x88\\x92[ ]*","subs":"-"}}
+    ]
+  }
+]

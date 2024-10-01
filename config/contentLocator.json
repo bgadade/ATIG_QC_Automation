@@ -1,0 +1,126 @@
+{
+  "EOC_MA":{
+    "2018":{
+      "1": {
+        "pageId": "pageid_1",
+        "type": "Text",
+        "findText": "2018",
+        "contentIndex": "0"
+        },
+      "2": {
+        "pageId": "pageid_1",
+        "type": "Text",
+        "findText": "EVIDENCE OF",
+        "refContentid": "1",
+        "offsetType": "Text",
+        "offsetNum": "1",
+        "contentIndex": "None"
+      },
+      "3": {
+        "pageId": "pageid_1",
+        "type": "Img",
+        "findText": "Book",
+        "refContentid": "1",
+        "offsetType": "General",
+        "offsetNum": "2",
+        "contentIndex": "None",
+        "regionBbox" : "(48, 655, 583, 763)",
+        "ix": "0"
+        },
+      "4": {
+        "pageId": "pageid_1",
+        "type": "Text",
+        "findText": "COVERAGE",
+        "refContentid": "1",
+        "offsetType": "Text",
+        "offsetNum": "2",
+        "contentIndex": "None"
+        },
+      "5": {
+        "pageId": "pageid_1",
+        "type": "Text",
+        "findText": "Toll-free",
+        "refContentid": "1",
+        "offsetType": "Text",
+        "offsetNum": "7",
+        "contentIndex": "None"
+        },
+      "6": {
+        "pageId": "pageid_1",
+        "type": "Img",
+        "findText": "Telephone",
+        "refContentid": "1",
+        "offsetType": "General",
+        "offsetNum": "9",
+        "contentIndex": "None",
+        "regionBbox" : "(11, 305, 562, 351)",
+        "ix": "0"
+        },
+      "7": {
+        "pageId": "pageid_1",
+        "type": "Text",
+        "findText": "www.UHC",
+        "refContentid": "1",
+        "offsetType": "Text",
+        "offsetNum": "9",
+        "contentIndex": "None"
+        },
+      "8": {
+        "pageId": "pageid_1",
+        "type": "Img",
+        "findText": "Laptop",
+        "refContentid": "1",
+        "offsetType": "General",
+        "offsetNum": "12",
+        "contentIndex": "None",
+        "regionBbox" : "(24, 269, 583, 301)",
+        "ix": "0"
+        },
+      "9":{
+        "pageId" : "pageid_1",
+        "type": "Img",
+        "findText": "UHGLogo",
+        "refContentid": "1",
+        "offsetType": "General",
+        "offsetNum": "13",
+        "contentIndex": "None",
+        "regionBbox" : "(25, 96, 594, 187)",
+        "ix": "0"
+      },
+      "10":{
+        "pageId" : "pageid_1",
+        "type": "Text",
+        "findText": "CMSCode",
+        "refContentid": "1",
+        "offsetType": "Text",
+        "offsetNum": "10",
+        "contentIndex": "-1"
+      },
+      "11":{
+        "pageId" : "pageid_2",
+        "type": "Text",
+        "findText": "fileNamePart",
+        "refContentid": "1",
+        "offsetType": "Text",
+        "offsetNum": "14",
+        "contentIndex": "-1"
+      },
+      "12":{
+        "pageId" : "pageid_2",
+        "type": "Text",
+        "findText": "LinesAbovefileNamePart",
+        "refContentid": "1",
+        "offsetType": "Text",
+        "offsetNum": "14",
+        "contentIndex": "[-6,-5,-4,-3,-2,-1]"
+      },
+      "13":{
+        "pageId" : "pageid_3",
+        "type": "Table",
+        "findText": "TableExtract",
+        "contentIndex": "None",
+        "ix":"0"
+      }
+    }
+  }
+}

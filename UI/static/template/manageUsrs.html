@@ -1,0 +1,77 @@
+<div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+  <div class="main">
+    <div class="alpha">
+      <ul class="pageHeader">
+        <li>Manage Users</li>
+      </ul>
+    </div>
+  </div>
+    <!-- Main content -->
+    <section class="contentSection">
+      <div class="row tableBox">
+      <!-- Your Page Content Here -->
+      <div class="container-fluid contentbody" data-ng-init="getUserList()">
+        <div class="row" style="margin-top: 22px;">
+          </div>
+          <div class="col-md-2">
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6">
+                <button type="button" class="btn btn-md pull-left  btndefault addRowBtn" ui-sref="newUser" style="margin-left:162px;width:110px;">ADD</button>
+              </div>
+              <div class="col-md-6">
+                <input class="inputSearch" type="text" placeholder="Search" ng-model="viewSearch" style="margin-right: -787px;width: 162px;">
+              </div>
+            </div>
+
+          </div>
+          <!-- <div class="col-md-2">
+          </div> -->
+          <div class="col-md-2">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-8"  style="margin-top:40px;">
+            <table class="table table-striped table-hover" cellspacing="0" width="100%" fixed-header height="300px">
+                <thead class="inputHead">
+                  <tr>
+                      <th></th>
+                      <th>Username</th>
+                      <th>Email</th>
+                      <th>Role</th>
+                      <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="users in usersList | filter:viewSearch">
+                      <td class="inputBodyData">
+                        <img src="/static/css/dist/img/avatar5.png" class="img-circle" alt="User Image" width="45px">
+                      </td>
+                      <td class="inputBodyData" style="padding-top: 23px;">{{users.userName}}</td>
+                      <td class="inputBodyData" style="padding-top: 23px;">{{users.email}}</td>
+                      <td class="inputBodyData" style="padding-top: 23px;">{{users.role}}</td>
+                      <td class="inputBodyData" style="padding-top: 23px;">
+                        <span class="glyphicon glyphicon-remove removeRow" ng-click="removeUser($index)"></span>
+                      </td>
+                  </tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="col-md-2">
+          </div>
+        </div>
+        <div class="row pull-right">
+          <div class="saveDiv">
+            <span class="glyphicon glyphicon-floppy-saved saveIcon" ng-click="setUsersList()"></span>
+          </div>
+        </div>
+      </div>
+     </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+</div>

@@ -1,0 +1,7 @@
+{
+  "document":{
+    "EOC_MA":{"subType":"MA ONLY", "type":"EOC"},
+    "EOC_PDP": {"subType":"PDP", "type":"EOC"},
+    "EOC_MAPD": {"subType":"MAPD", "type":"EOC"}
+  }
+}

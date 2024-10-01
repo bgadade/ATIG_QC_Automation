@@ -1,0 +1,56 @@
+<div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+  <div class="main">
+    <div class="alpha">
+      <ul class="pageHeader">
+        <li>Choose a SOT Input File to Process</li>
+      </ul>
+    </div>
+  </div>
+    <!-- Main content -->
+    <section class="contentSection">
+      <div class="row tableBox">
+      <!-- Your Page Content Here -->
+        <div ng-show="showLoader" id="mydiv">
+          <img  class="mappingSpinner" src="/static/images/page-loader.gif"/>
+        </div>
+        <div class="container-fluid contentbody" style="padding-right:6%" data-ng-init="getProviderList()">
+          <div class="row" class="autoMargin">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+              <div class="row">
+                <label>Upload SOT Input File</label>
+                <hr>
+              </div>
+              <div class="row input-group form-group" style="padding-right:4px;">
+                  <input type="text" class="files" ng-value="myFile.name">
+                  <label class="input-group-btn">
+                    <span class="btn btndefault" name="Browse" >
+                      Browse<input type="file" ng-model="uploadExcelFile" ngf-select="upload($files)" file-model = "myFile" name="xlfile" id="xlf" style="display:none;" accept=".xls,.xlsx,.xlsm">
+                    </span>
+                  </label>
+              </div>
+
+              <div class="row inputrows">
+                <button type="button" ng-if ="selectedYear && uploadExcelFile" class="btn btn-md btndefault" value="Next" ng-disabled="checkFile" ng-click="next()">Next</button>
+              </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-4">
+                <label>Select a Year</label>
+                <hr>
+                <select class="form-control" ng-model="selectedYear" >
+                   <option disabled selected value>Select Year</option>
+                   <option>2018</option>
+                   <option>2019</option>
+                 </select>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+</div>

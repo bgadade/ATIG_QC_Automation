@@ -1,0 +1,102 @@
+<div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+  <div class="main">
+    <div class="alpha">
+      <ul class="pageHeader">
+        <li>Add New User</li>
+      </ul>
+    </div>
+  </div>
+    <!-- Main content -->
+    <section class="contentSection">
+      <div class="row tableBox">
+      <!-- Your Page Content Here -->
+      <div class="container-fluid contentbody">
+        <form class="form-horizontal" form  name="userForm" ng-submit="addNewUser()" style="padding-top:5%">
+              <div class="form-group">
+                <label class="col-md-4 control-label">Username</label>
+                <div class="col-md-4 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input  name="userName" ng-model="user.userName" placeholder="Username" class="form-control"  type="text" required>
+                  </div>
+                </div>
+              </div>
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label">E-Mail</label>
+                  <div class="col-md-4 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                    <input name="email" ng-model="user.email" placeholder="E-Mail Address" class="form-control"  type="email" required>
+                  </div>
+                </div>
+              </div>
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label">Password</label>
+                  <div class="col-md-4 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input name="password" id="password" ng-model="user.password" pattern="^\S{5,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 5 characters' : ''); if(this.checkValidity()) form.confirmPassword.pattern = this.value;" placeholder="Password" class="form-control"  type="password" required>
+                  </div>
+                </div>
+              </div>
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label">Confirm Password</label>
+                  <div class="col-md-4 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input name="confirmPassword" id="confirmPassword" ng-model="confirmPassword" pattern="^\S{5,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" placeholder="Confirm Password" class="form-control"  type="password" required>
+                  </div>
+                </div>
+              </div>
+              <!-- radio checks -->
+              <!-- <div class="form-group">
+                <label class="col-md-4 control-label">Role</label>
+                <div class="col-md-4">
+                  <div class="radio radio-inline">
+                    <label>
+                      <input type="radio" name="role" ng-model="user.role" value="admin" ng-required="!user.role"/> Admin
+                    </label>
+                  </div>
+                  <div class="radio radio-inline">
+                    <label>
+                      <input type="radio" name="role" ng-model="user.role" value="user" ng-required="!user.role"/> User
+                    </label>
+                  </div>
+                </div>
+              </div> -->
+              <!-- Text input-->
+              <!-- <div class="form-group">
+                <label class="col-md-4 control-label">Profile Pic</label>
+                  <div class="col-md-4 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input type = "file" file-model = "myFile"/>
+                    <button ng-click = "uploadFile()">Upload</button>
+                  </div>
+                </div>
+              </div> -->
+              <!-- Button -->
+              <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4"><br>
+                  <!-- &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp -->
+                  <button type="submit" class="btn btndefault" style="margin-top:20px;">
+                    <!-- &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp -->
+                    SUBMIT <span class="glyphicon glyphicon-send"></span>
+                    <!-- &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp -->
+                  </button>
+                </div>
+              </div>
+            <!-- </fieldset> -->
+        </form>
+      </div>
+     </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+</div>

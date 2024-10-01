@@ -1,0 +1,30 @@
+[
+  {"LayerName":"Checkpoints", "ProcessStage":0, "Transformation":[
+    {"CheckPoint1":{
+      "derivations":[
+        {"name": "compareExtText","input": {"contentid":"1", "pageid":"pageid_1", "refVal":"2018", "errMsg":"Text Mismatch"}},
+        {"name": "compareExtText","input": {"contentid":"2", "pageid":"pageid_1", "refVal":"EVIDENCE OF", "errMsg":"Text Mismatch"}},
+        {"name": "compareExtImg","input": {"contentid":"3", "pageid":"pageid_1", "refVal": "../standardTemplate/EOC_MA/2018/1/Book.png", "errMsg":"Mismatch"}},
+        {"name": "compareExtText","input": {"contentid":"4", "pageid":"pageid_1", "refVal":"COVERAGE", "errMsg":"Text Mismatch"}},
+        {"name": "compareExtImg","input": {"contentid":"6", "pageid":"pageid_1", "refVal":"../standardTemplate/EOC_MA/2018/1/Telephone.png", "errMsg":"Mismatch"}},
+        {"name": "checkAlignment","input": {"contentid":"6", "pageid":"pageid_1", "imgNm": "Telephone Logo", "comp":{"contentid":"5", "pageid":"pageid_1", "orientation":"leftHeight", "offset":"3"}, "errMsg":"Alignment Issue"}},
+        {"name": "compareExtImg","input": {"contentid":"8", "pageid":"pageid_1", "refVal":"../standardTemplate/EOC_MA/2018/1/Laptop.png", "errMsg":"Img Mismatch"}},
+        {"name": "checkAlignment","input": {"contentid":"8", "pageid":"pageid_1","imgNm": "Laptop Logo", "comp":{"contentid":"7", "pageid":"pageid_1", "orientation":"leftHeight", "offset":"10"}, "errMsg":"Alignment Issue"}},
+        {"name": "compareExtImg","input": {"contentid":"9", "pageid":"pageid_1", "refVal":"../standardTemplate/EOC_MA/2018/1/UHC_Logo.png", "errMsg":"Mismatch"}},
+        {"name": "checkCMSCode","input": {"contentid":"10", "pageid":"pageid_1", "refVal":"3", "errMsg":"CMS Code Missing"}}
+      ]}
+    },
+    {"CheckPoint2": {
+        "derivations": [
+          {"name": "compareTable", "input": { "contentid": "13", "pageid": "pageid_3"}}
+        ]}
+    },
+    {"CheckPoint3":{
+      "derivations":[
+        {"name": "checkCodeWithFileName","input": {"contentid":"11", "pageid":"pageid_2", "deriveRef":"extractCodeFromFile", "errMsg":"Extracted code doesn't match filename"}},
+        {"name": "checkOverlap","input": {"contentid":"12", "pageid":"pageid_2", "errMsg":"Text Overlap found"}}
+      ]}
+    }
+
+  ]}
+]

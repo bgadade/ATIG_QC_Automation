@@ -1,0 +1,57 @@
+{
+  "EOC_MA":{
+    "2018": {
+      "pageid_1": {
+        "purpose": "Non-Table",
+        "documentId": "EOC_MA",
+        "findText": [],
+        "pageIndex": 0
+      },
+      "pageid_2": {
+        "purpose": "Non-Table",
+        "documentId": "EOC_MA",
+        "findText": [],
+        "pageIndex": -1
+      },
+      "pageid_3": {
+        "purpose": "Table",
+        "documentId": "EOC_MA",
+        "fromFindText": [
+          {
+            "text": "CHAPTER 4",
+            "font": "UHCSans-Heavy",
+            "size": "",
+            "offset":"0"
+          },
+          {
+            "text": "SECTION 2",
+            "font": "UHCSans-Bold",
+            "size": "",
+            "offset":"0"
+          },
+          {
+            "text": "Section 2.1",
+            "font": "UHCSans-Bold",
+            "size": "",
+            "offset":"0"
+          },
+          {
+            "text": "Medical Benefits Chart",
+            "font": "UHCSans-Bold",
+            "size": "",
+            "offset":"0"
+          }
+        ],
+        "toFindText": [
+          {
+            "text": "SECTION 3",
+            "font": "UHCSans-Bold",
+            "size": "",
+            "offset":"0"
+          }
+        ]
+      }
+    },
+    "2019":{}
+  }
+}

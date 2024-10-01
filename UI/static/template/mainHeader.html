@@ -1,0 +1,69 @@
+<!-- Main Header -->
+<header class="main-header">
+
+  <!-- Logo -->
+  <a href="" class="logo">
+    <!-- mini logo for sidebar mini 50x50 pixels -->
+    <span class="logo-mini">
+      <div class="navbar-brand hidden-xs">
+        <!-- <img src="/static/images/logo_wipro.png"> -->
+        <img class="whiteBackgound" src="/static/images/logo_wiproholmes.png">
+      </div>
+    </span>
+    <!-- logo for regular state and mobile devices -->
+    <span class="logo-lg">
+      <div class="navbar-brand whiteBackgound hidden-xs">
+        <img src="/static/images/logo_wiproholmes.png">
+      </div>
+    </span>
+  </a>
+
+  <!-- Header Navbar -->
+  <nav class="navbar navbar-static-top" role="navigation">
+    <!-- Sidebar toggle button-->
+    <a class="sidebar-toggle" data-target="#navbarCollapse" data-toggle="offcanvas" role="button" ng-click="hideFooter()">
+      <span class="sr-only">Toggle navigation</span>
+    </a>
+    <ul class="nav navbar-nav navbar-left" style="height:20px">
+       <li class="section-head" style="padding-left: 87px;font-size: 16px;margin-top: 16px;margin-left: -84px;"><b><a href="#">Print & Correspondence QC Automation</a></b></li>
+    </ul>
+    <!-- Navbar Right Menu -->
+    <ul class="nav navbar-nav navbar-right" ng-if="userRole=='user' && domain=='ER-Enrollment Receipt'">
+      <li><a>{{userName}}</a> </li>
+      <li ><a ui-sref="home"><span class="glyphicon glyphicon-home"></span></a></li>
+      <li><a ng-click="logout()"><span class="glyphicon glyphicon-log-in"></span></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right" ng-if="userRole=='user' && domain=='EOC-Evidence Of Coverage'">
+      <li><a>{{userName}}</a> </li>
+      <li ><a ui-sref="uploadExcel"><span class="glyphicon glyphicon-home"></span></a></li>
+      <li><a ng-click="logout()"><span class="glyphicon glyphicon-log-in"></span></a></li>
+    </ul>
+  </nav>
+</header>
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar" id="navbarCollapse" >
+
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
+
+        <ul class="sidebar-menu" ng-if="userRole=='admin'">
+          <!-- <li class="header">HEADER</li> -->
+          <!-- Optionally, you can add icons to the links -->
+           <li ui-sref-active="active"><a ui-sref="mngUsr"><i class="fa fa-users"></i> <span>Manage Users</span></a></li>
+        </ul>
+        <!-- Sidebar Menu -->
+        <ul class="sidebar-menu" ng-if="userRole=='user' && domain=='EOC-Evidence Of Coverage'">
+          <!-- <li class="header">HEADER</li> -->
+          <!-- Optionally, you can add icons to the links -->
+          <li ui-sref-active="active" ng-class="{active: state.current.name === 'uploadExcel'}"><a ui-sref="uploadExcel"><i class="glyphicon glyphicon-upload"></i> <span>Upload Input Files</span></a></li>
+
+        </ul>
+         <ul class="sidebar-menu" ng-if="userRole=='user' && domain=='ER-Enrollment Receipt'">
+          <!-- Optionally, you can add icons to the links -->
+          <li ui-sref-active="active" ng-class="{active: state.current.name === 'input'}"><a ui-sref="home"><i class="glyphicon glyphicon-upload"></i> <span>Upload Input Files</span></a></li>
+
+        </ul>
+    <!-- /.sidebar-menu -->
+  </section>
+  <!-- /.sidebar -->
+</aside>

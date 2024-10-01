@@ -1,0 +1,37 @@
+body{background-color:#fafafa !important; font-family: Arial, Helvetica, sans-serif;color:rgb(102, 102, 102);}
+
+/* ..........Nav........ */
+.navbar-brand{height: 56px;}
+.whiteBackgound{
+    width: 90px;
+    margin-top: 3px;
+    margin-left: 15px;
+}
+.navbar-right {
+  margin-right:0px;
+}
+
+/* ..........Footer........... */
+.footertxt{ padding: 15px 15px; background-color: #f0f0f0; position: relative;  bottom: 0; color:#999999; text-align:center;}
+
+/********************BreadCrumbs***********************/
+.main { background-color:  #e2e5e6; margin-bottom: -20px;}
+.alpha { padding-left: 0 !important;}
+.beta { padding-right: 0 !important;}
+.rowMargin{margin-left: 0px;margin-right: 0px;}
+
+/* ..........Page Header........ */
+.pageHeader { padding: 15px 16px;  list-style: none; background-color: #f9f9f9;}
+.pageHeader a{color:#036;}
+.pageHeader>li {display: inline-block;color:#036;font-size: 14px;font-weight: 740;}
+
+/***************Configure CSS********************/
+.contentSection{
+  padding: 0px 30px;
+  margin-bottom: 40px;
+  padding-bottom: 5px;
+}
+
+/* ..........Table........ */
+.tableBox{background-color: #fff; padding: 10px;box-shadow: #ededed 0px 0px 7px 3px; margin-top: 14px}
+.tableTopRow{background-color: #daddd0;}

@@ -1,0 +1,5 @@
+[
+	{"search": "Abdominal Aortic Aneurysm Screening", "derivations": {"getValue":"AAA Screening"}},
+    {"search": "Acupuncture Services", "derivations": {"getValue":"Custom Only: Acupuncture" , "getVisits":"Custom Only: Acupuncture Number of Visits per year", "getDollarMax":"Acupuncture Dollar Max"}},
+    {"search": "Ambulance Services", "derivations": {"getValue":"AMBULANCE_EMERGENCY ROOM_URGENT CARE: Ambulance Services"}}
+]

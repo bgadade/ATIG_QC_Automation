@@ -1,0 +1,14 @@
+*.pdf
+.idea/*
+*.pyc
+output/output.xlsx
+output/*.html
+tmp/*.jpg
+tmp/*.html
+images
+tmp/*
+extracted_temp/*
+input/*.xlsx
+*.pkl
+pdfParser
+*.zip

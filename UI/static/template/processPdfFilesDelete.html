@@ -1,0 +1,112 @@
+
+<div class="col-md-offset-2 col-sm-offset-3 col-xs-offset-1 content-wrapper leftmargin">
+  <div class="main">
+    <div class="alpha">
+      <ul class="pageHeader">
+        <li>upload input files</li>
+      </ul>
+    </div>
+  </div>
+    <!-- Main content -->
+    <section class="contentSection">
+       <div class="row tableBox" style="height: 512px;">
+          <!-- Your Page Content Here -->
+        <div ng-show="showLoader" id="mydiv">
+          <img  class="mappingSpinner" src="/static/images/page-loader.gif"/>
+        </div>
+
+        <div class="container-fluid contentbody" style="padding-right:6%">
+          <div class="">
+            <div class="col-md-2">
+             <label style="margin-left: -18px;">Upload PDF Files</label>
+             <div class="row input-group form-group" style="padding-right:323px;">
+                 <label class="input-group-btn" style="padding-right: 36px;">
+                   <span class="btn btndefault" name="Browse" style="width: 125%;">
+                     Browse<input type="file" ngf-select="upload($files)" file-model = "myFile" multiple name="xlfile" id="xlf" style="display:none;" accept=".pdf,.PDF">
+                   </span>
+                 </label>
+                 <div><button style ="width: 175%;" ng-disabled="disableRun" class="btn btndefault" type="button" ng-click = "processPdfFiles()"><b>Run</b></button></div>
+             </div>
+           </div>
+        </div>
+            <!--<button ng-click = "getResult()">Click me</button>-->
+             <table class="table table-bordered" data-ng-init="getResult()">
+                 <thead>
+                   <tr>
+                     <th>Filename</th>
+                     <th>Comments</th>
+                     <th>Status</th>
+                   </tr>
+                 </thead>
+                 <tbody ng-repeat="data in result" >
+                   <tr>
+                     <td>{{data.filename}}</td>
+                     <td>
+                       <table cellpadding="0" cellspacing="0">
+                            <tbody ng-repeat="issue in data.Comments">
+                            <tr>
+                                <td>{{issue}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                      </td>
+                     <td>{{data.Status}}</td>
+                   </tr>
+                 </tbody>
+               </table>
+ <table class="table table-bordered">
+                 <thead>
+                   <tr>
+                     <th>Filename</th>
+                     <th>Comments</th>
+                     <th>Status</th>
+                   </tr>
+                 </thead>
+                 <tbody ng-repeat="data in result" >
+                   <tr>
+                     <td>{{data.filename}}</td>
+                     <td>
+                       <table cellpadding="0" cellspacing="0">
+                            <tr>
+                                <th>Comments</th>
+                            </tr>
+                            <tbody ng-repeat="issue in data.Comments">
+                            <tr>
+                                <td>{{issue}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                      </td>
+                     <td>{{data.Status}}</td>
+                   </tr>
+                 </tbody>
+               </table>
+
+          <div class="row">
+            <table class="table table-bordered tableDiv" height="100px" ng-show="showConvertedFiles">
+                       <thead>
+                         <tr>
+                           <th>File Name</th>
+                            <th>Status</th>
+                         </tr>
+                       </thead>
+                       <tbody>
+                        <tr ng-repeat = "value in pdfData"  on-finish-render="arrangeHeaders()" >
+                           <td>
+                             <span style="cursor:pointer;" ng-class="{'color-red': value.status === 'Fail',  'color-green': value.status === 'Pass'}" ng-click="getPDF(value.filename,value.status)">{{value.filename}}</span>
+                             <!-- <a id="{{'file'+$index}}" href="" target="_blank" ><span ng-class="{'color-red': value.status === 'Fail',  'color-green': value.status === 'Pass'}" ng-click = "OpenPdf(value.filename,value.status,$index)">{{value.filename}}</span></a> -->
+                           </td>
+                           <td>
+                             <span style="cursor:pointer;" ng-class="{'color-red': value.status === 'Fail',  'color-green': value.status === 'Pass'}" ng-click="getPDF(value.filename,value.status)">{{value.status}}</span>
+                            <!-- <a id="{{'status'+$index}}" href="" target="_blank"><span ng-class="{'color-red': value.status === 'Fail',  'color-green': value.status === 'Pass'}" ng-click = "OpenPdf(value.filename,value.status,$index)">{{value.status}}</span></a> -->
+                           </td>
+                        </tr>
+                       </tbody>
+            </table>
+          </div>
+
+        </div>
+
+       </div>
+    </section>
+ </div>
